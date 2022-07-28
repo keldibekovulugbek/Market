@@ -3,3 +3,8 @@ D:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.GeneratedMSBui
 D:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.AssemblyInfoInputs.cache
 D:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.AssemblyInfo.cs
 D:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.csproj.CoreCompileInputs.cache
+G:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.csproj.AssemblyReference.cache
+G:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.AssemblyInfoInputs.cache
+G:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.AssemblyInfo.cs
+G:\Programming\C#\Market\Market.Data\obj\Debug\net6.0\Market.Data.csproj.CoreCompileInputs.cache

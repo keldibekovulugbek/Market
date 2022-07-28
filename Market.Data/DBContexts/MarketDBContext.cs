@@ -9,7 +9,7 @@ namespace Market.Data.DBContexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            string connectionString = "Host=localhost;Port=5432;Database=market;Username=postgres;Password=postgres";
+            string connectionString = "Host=localhost;Port=5432;Database=market;Username=postgres;Password=120403";
             optionsBuilder.UseNpgsql(connectionString);
 
 
