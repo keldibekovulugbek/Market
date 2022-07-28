@@ -11,13 +11,14 @@ using System.Threading.Tasks;
 
 namespace Market.Service.Interfaces
 {
-    public interface IProductService<Product>
+    public interface IProductService<Product, ProductForCreationDTO>
     {
         Task<BaseResponse<Product>> CreateAsync(ProductForCreationDTO model, Expression<Func<Product, bool>> expression);
         Task<BaseResponse<Product>> UpdateAsync(Guid id, ProductForCreationDTO model);
         Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression);
         Task<BaseResponse<Product>> GetAsync(Expression<Func<Product, bool>> expression);
         Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
-        Task<BaseResponse<Product>> RestoreAsync(Expression<Func<Product, bool>> expression);
+        
+        
     }
 }

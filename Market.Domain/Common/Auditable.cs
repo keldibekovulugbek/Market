@@ -4,10 +4,10 @@ namespace Market.Domain.Common
 {
     public class Auditable
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         public ItemState ItemState { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
 
         public virtual void OnCreated()

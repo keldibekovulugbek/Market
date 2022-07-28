@@ -15,6 +15,7 @@ namespace Market.Service.DTOs.ProductsDTOs
         public decimal Price { get; set; }
         [Required]
         public int Quantity { get; set; }
+        
         [Required, MinLength(4), MaxLength(600)]
         public string Description { get; set; }
         public int Discount { get; set; } = 0;

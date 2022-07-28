@@ -10,9 +10,9 @@ namespace Market.Domain.Entities.Products
         public int Quantity { get; set; }
         public string Description { get; set; }
         public int Discount { get; set; } = 0;
-        public Guid CategoryId { get; set; }
+        public Guid? CategoryId { get; set; }
         public Category Category { get; set; }
-        public Guid SupplierId { get; set; }
+        public Guid? SupplierId { get; set; }
         public Supplier Supplier { get; set; }
 
     }

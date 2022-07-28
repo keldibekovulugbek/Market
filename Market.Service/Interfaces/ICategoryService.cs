@@ -16,6 +16,6 @@ namespace Market.Service.Interfaces
         Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression);
         Task<BaseResponse<Category>> GetAsync(Expression<Func<Category, bool>> expression);
         Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
-        Task<BaseResponse<Category>> RestoreAsync(Expression<Func<Category, bool>> expression);
+        
     }
 }
