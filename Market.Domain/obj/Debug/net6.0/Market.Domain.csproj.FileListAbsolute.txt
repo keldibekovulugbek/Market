@@ -1,0 +1,12 @@
+D:\Programming\C#\Market\Market.Domain\bin\Debug\net6.0\Market.Domain.deps.json
+D:\Programming\C#\Market\Market.Domain\bin\Debug\net6.0\Market.Domain.dll
+D:\Programming\C#\Market\Market.Domain\bin\Debug\net6.0\Market.Domain.pdb
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.csproj.AssemblyReference.cache
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.AssemblyInfoInputs.cache
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.AssemblyInfo.cs
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.dll
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\refint\Market.Domain.dll
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\Market.Domain.pdb
+D:\Programming\C#\Market\Market.Domain\obj\Debug\net6.0\ref\Market.Domain.dll
