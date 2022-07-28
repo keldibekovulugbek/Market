@@ -644,11 +644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
+      "projectUniqueName": "G:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
       "projectName": "Market.ConsoleAplication",
-      "projectPath": "D:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
+      "projectPath": "G:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
       "packagesPath": "C:\\Users\\keldi\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\C#\\Market\\Market.ConsoleAplication\\obj\\",
+      "outputPath": "G:\\Programming\\C#\\Market\\Market.ConsoleAplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

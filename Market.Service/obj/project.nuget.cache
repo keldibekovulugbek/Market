@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YqnVfQDk59Qs4Ew/3VnnliEgpKWw+3l7HkJCvUdiq/0Zntnn/XYW3aEIykS+8c+sy0dNEXUlPSzpwWxnXMGrtg==",
+  "dgSpecHash": "5cEDsJMHggkR8DCrq1SMbFMAopxZVz08I/9nMqhS/c0Pfqfizypz+eDjExEKWzNYLVOs/JKQpxm2WOQXAQl0/w==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
+  "projectFilePath": "G:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\keldi\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\keldi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"

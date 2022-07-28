@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F4DverNKJ8npNt9dyu5dN64kbBmfkDVmPGZ3rf/vdkd2fD+UQtiFJUVRujVTLBA6iUCE6cBn+G96c6iszsYfMg==",
+  "dgSpecHash": "t3fzaBaf+t1Z20TKQ1I6XQ9pRrNqsqKr248tTGHWIrH/JwfiACHbXp8y6yG+R2mR1xeAnagnv7VU9cUk1G0f4Q==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
+  "projectFilePath": "G:\\Programming\\C#\\Market\\Market.ConsoleAplication\\Market.ConsoleAplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\keldi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\keldi\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",

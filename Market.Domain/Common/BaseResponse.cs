@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Market.Service.Interfaces
+namespace Market.Domain.Common
 {
-    public interface IGenericService<TSource,TSourceForCreationDTO> 
+    internal class BaseResponse
     {
     }
 }

@@ -139,11 +139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
+      "projectUniqueName": "G:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
       "projectName": "Market.Service",
-      "projectPath": "D:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
+      "projectPath": "G:\\Programming\\C#\\Market\\Market.Service\\Market.Service.csproj",
       "packagesPath": "C:\\Users\\keldi\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\C#\\Market\\Market.Service\\obj\\",
+      "outputPath": "G:\\Programming\\C#\\Market\\Market.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -164,8 +164,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Programming\\C#\\Market\\Market.Domain\\Market.Domain.csproj": {
-              "projectPath": "D:\\Programming\\C#\\Market\\Market.Domain\\Market.Domain.csproj"
+            "G:\\Programming\\C#\\Market\\Market.Domain\\Market.Domain.csproj": {
+              "projectPath": "G:\\Programming\\C#\\Market\\Market.Domain\\Market.Domain.csproj"
             }
           }
         }
