@@ -2,11 +2,11 @@
 
 namespace Market.Data.IMarketRepositories
 {
-    internal interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
-        IProductRepository Users { get; }
-        ICategoryRepository Courses { get; }
-        ISupplierRepository Authors { get; }
+        IProductRepository Products { get; }
+        ICategoryRepository Categories { get; }
+        ISupplierRepository Suppliers { get; }
         Task SaveChangesAsync();
     
     }

@@ -1,4 +1,7 @@
-﻿using Market.Domain.Common;
+﻿using AutoMapper;
+using Market.Data.IMarketRepositories;
+using Market.Data.MarketRepositories;
+using Market.Domain.Common;
 using Market.Domain.Configurations;
 using Market.Domain.Entities.Products;
 using Market.Service.DTOs.ProductsDTOs;
@@ -14,6 +17,15 @@ namespace Market.Service.Services
 {
     public class CategoryService : ICategoryService<Category, CategoryForCreationDTO>
     {
+        public CategoryService()
+        {
+            IUnitOfWork unitOfWork,
+                IMapper mapper,
+                GenericRepository<Category> genericRepository
+                
+
+
+        }
         public Task<BaseResponse<Category>> CreateAsync(CategoryForCreationDTO model, Expression<Func<Category, bool>> expression)
         {
             throw new NotImplementedException();

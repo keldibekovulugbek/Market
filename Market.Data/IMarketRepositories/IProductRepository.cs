@@ -2,7 +2,7 @@
 
 namespace Market.Data.IMarketRepositories
 {
-    internal interface IProductRepository : IGenericRepository<Product>
+    public interface IProductRepository : IGenericRepository<Product>
     {
     }
 
