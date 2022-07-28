@@ -4,8 +4,10 @@ using Market.Data.MarketRepositories;
 using Market.Domain.Common;
 using Market.Domain.Configurations;
 using Market.Domain.Entities.Products;
+using Market.Domain.Enums;
 using Market.Service.DTOs.ProductsDTOs;
 using Market.Service.Interfaces;
+using Market.Service.Mappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,28 +19,55 @@ namespace Market.Service.Services
 {
     public class CategoryService : ICategoryService<Category, CategoryForCreationDTO>
     {
+        protected readonly ICategoryRepository genericRepository;
+        private readonly IMapper mapper;
+        
+
         public CategoryService()
         {
-            IUnitOfWork unitOfWork,
-                IMapper mapper,
-                GenericRepository<Category> genericRepository
-                
-
-
+            genericRepository = new CategoryRepository();
+            mapper = new MapperConfiguration(cfg => cfg.AddProfile(new MappingProfile())).CreateMapper();
         }
-        public Task<BaseResponse<Category>> CreateAsync(CategoryForCreationDTO model, Expression<Func<Category, bool>> expression)
+        public async Task<BaseResponse<Category>> CreateAsync(CategoryForCreationDTO model, Expression<Func<Category, bool>> expression)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<Category>();
+
+            var exist = await genericRepository.GetAsync(expression);
+            if (exist != null )
+            {
+                response.Error = new ErrorResponse(400, "This catagory name already exist");
+                return response;
+            }
+            var entity = mapper.Map<Category>(model);
+            entity.OnCreated();
+            response.Data = await genericRepository.CreateAsync(entity);
+            await genericRepository.SaveAsync();
+            return response;
         }
 
-        public Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression)
+        public async Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<bool>();
+            var exist = await genericRepository.GetAsync(expression);
+
+            if (exist == null)
+            {
+                response.Error = new ErrorResponse(404, "This catagory does not exist");
+                return response;
+            }
+            exist.OnDeleted();
+
+            await genericRepository.SaveAsync();
+
+            response.Data = true;   
+            return response;
+
         }
 
         public Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<IEnumerable<Category>>();
+            var catagories = genericRepository.Where(expression).Where(p=> p.ItemState!=ItemState.Deleted);
         }
 
         public Task<BaseResponse<Category>> GetAsync(Expression<Func<Category, bool>> expression)

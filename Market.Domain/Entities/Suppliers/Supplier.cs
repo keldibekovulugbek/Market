@@ -7,12 +7,13 @@ namespace Market.Domain.Entities.Suppliers
 {
     public class Supplier : Auditable
     {
-        public string Name { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
+        
+        public string Name { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
 
-        public string Address { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public string Address { get; set; } = string.Empty;
+        public ICollection<Product> Products { get; set; } = new List<Product>();
 
     }
 }

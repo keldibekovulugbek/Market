@@ -12,8 +12,13 @@ namespace Market.Data.MarketRepositories
 {
     public class CategoryRepository :GenericRepository<Category>, ICategoryRepository
     {
+        public CategoryRepository()
+        {
+        }
+
         public CategoryRepository(MarketDBContext context) : base(context)
         {
+            
         }
         
        

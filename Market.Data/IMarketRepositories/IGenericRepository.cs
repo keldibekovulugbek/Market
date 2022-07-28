@@ -10,5 +10,6 @@ namespace Market.Data.IMarketRepositories
         Task<T> CreateAsync(T entity);
         T Update(T entity);
         Task<bool> DeleteAsync(Expression<Func<T, bool>> predicate);
+        Task SaveAsync();
     }
 }

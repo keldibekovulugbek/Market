@@ -44,5 +44,8 @@ namespace Market.Data.MarketRepositories
             return false;
         }
 
+        public Task SaveAsync()
+           => this.dbContext.SaveChangesAsync();
+        
     }
 }

@@ -10,7 +10,7 @@ namespace Market.Data.MarketRepositories
 {
     public class UnitOfWork : IUnitOfWork
     { 
-        l
+        
         public IProductRepository Products { get; }
 
         public ICategoryRepository Categories { get; }
