@@ -12,8 +12,5 @@ namespace Market.Data.MarketRepositories
 {
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
-        public ProductRepository(MarketDBContext dbContext) : base(dbContext)
-        {
-        }
     }
 }

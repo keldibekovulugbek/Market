@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Market.Data.DBContexts;
 using Market.Data.IMarketRepositories;
 using Market.Data.MarketRepositories;
 using Market.Domain.Common;
@@ -21,7 +22,7 @@ namespace Market.Service.Services
     {
         protected readonly ICategoryRepository genericRepository;
         private readonly IMapper mapper;
-        
+        private readonly MarketDBContext dBContext;
 
         public CategoryService()
         {
@@ -66,8 +67,9 @@ namespace Market.Service.Services
 
         public Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null)
         {
-            var response = new BaseResponse<IEnumerable<Category>>();
-            var catagories = genericRepository.Where(expression).Where(p=> p.ItemState!=ItemState.Deleted);
+            //var response = new BaseResponse<IEnumerable<Category>>();
+            //var catagories = genericRepository.Where(expression).Where(p=> p.ItemState!=ItemState.Deleted);
+            throw new NotImplementedException();
         }
 
         public Task<BaseResponse<Category>> GetAsync(Expression<Func<Category, bool>> expression)

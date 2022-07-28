@@ -13,7 +13,7 @@ namespace Market.Domain.Entities.Suppliers
         public string Email { get; set; } = string.Empty;
 
         public string Address { get; set; } = string.Empty;
-        public ICollection<Product> Products { get; set; } = new List<Product>();
+        public ICollection<Product> Products { get; set; } 
 
     }
 }

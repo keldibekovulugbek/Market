@@ -13,6 +13,7 @@ namespace Market.Domain.Common
         public virtual void OnCreated()
         {
             CreatedAt = DateTime.Now;
+            UpdatedAt = DateTime.Now;
             ItemState = ItemState.Created;
 
         }

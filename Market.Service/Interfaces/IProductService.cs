@@ -17,7 +17,7 @@ namespace Market.Service.Interfaces
         Task<BaseResponse<Product>> UpdateAsync(Guid id, ProductForCreationDTO model);
         Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression);
         Task<BaseResponse<Product>> GetAsync(Expression<Func<Product, bool>> expression);
-        Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
+        Task<BaseResponse<IEnumerable<Product>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null);
         
         
     }

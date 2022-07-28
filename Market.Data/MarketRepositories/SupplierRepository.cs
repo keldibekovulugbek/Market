@@ -11,9 +11,5 @@ namespace Market.Data.MarketRepositories
 {
     public class SupplierRepository : GenericRepository<Supplier>, ISupplierRepository
     {
-        public SupplierRepository(MarketDBContext context) : base(context)
-        {
-
-        }
     }
 }

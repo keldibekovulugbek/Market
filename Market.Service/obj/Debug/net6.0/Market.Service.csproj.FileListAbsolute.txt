@@ -25,3 +25,5 @@ G:\Programming\C#\Market\Market.Service\obj\Debug\net6.0\Market.Service.dll
 G:\Programming\C#\Market\Market.Service\obj\Debug\net6.0\refint\Market.Service.dll
 G:\Programming\C#\Market\Market.Service\obj\Debug\net6.0\Market.Service.pdb
 G:\Programming\C#\Market\Market.Service\obj\Debug\net6.0\ref\Market.Service.dll
+G:\Programming\C#\Market\Market.Service\bin\Debug\net6.0\Market.Data.dll
+G:\Programming\C#\Market\Market.Service\bin\Debug\net6.0\Market.Data.pdb

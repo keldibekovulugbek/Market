@@ -1,22 +1,57 @@
-﻿using Market.Domain.Common;
+﻿using AutoMapper;
+using Market.Data.DBContexts;
+using Market.Domain.Common;
 using Market.Domain.Configurations;
 using Market.Domain.Entities.Products;
 using Market.Service.DTOs.ProductsDTOs;
 using Market.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Market.Service.Services;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
+// Create to Category DBSet
 namespace Market.Service.Services
 {
     public class ProductService : IProductService<Product, ProductForCreationDTO>
     {
-        public Task<BaseResponse<Product>> CreateAsync(ProductForCreationDTO model, Expression<Func<Product, bool>> expression)
+        private readonly MarketDBContext _dbContext;
+        private readonly IMapper _mapper;
+        public ProductService(MarketDBContext dbContext, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext;
+            _mapper = mapper;
+        }
+        public async Task<BaseResponse<Product>> CreateAsync(ProductForCreationDTO model)
+        {
+            var product = _mapper.Map<Product>(model);
+            _dbContext.Products.Add(product);
+            await _dbContext.SaveChangesAsync();
+            return new BaseResponse<Product>
+            {
+                Data = product,
+                Error = new ErrorResponse(200, "Product created successfully") { Code = 200 }
+
+            };
+        }
+
+
+        public async Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Product, bool>> expression)
+        {
+            var product = await _dbContext.Products.FirstOrDefaultAsync(expression);
+            if (product == null)
+            {
+                return new BaseResponse<bool>
+                {
+                    Error = new ErrorResponse(404, "Product not found") { Code = 404 }
+
+                };
+            }
+            _dbContext.Products.Remove(product);
+            await _dbContext.SaveChangesAsync();
+            return new BaseResponse<bool>
+            {
+                Error = new ErrorResponse(200, "Product deleted successfully") { Code = 200 }
+            };
         }
 
         public Task<BaseResponse<bool>> DeleteAsync(Expression<Func<Category, bool>> expression)
@@ -24,19 +59,17 @@ namespace Market.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<BaseResponse<IEnumerable<Category>>> GetAllAsync(PaginationParams @params, Expression<Func<Category, bool>> expression = null)
+        public async Task<BaseResponse<IEnumerable<Product>>> GetAllAsync(PaginationParams @params, Expression<Func<Product, bool>> expression = null)
         {
-            throw new NotImplementedException();
+            var products = await _dbContext.Products.Where(expression).Skip((@params.PageSize - 1) * @params.PageSize).Take(@params.PageSize).ToListAsync();
+            return new BaseResponse<IEnumerable<Product>>
+            {
+                Data = products,
+                Error = new ErrorResponse(200, "Products retrieved successfully") { Code = 200 }
+            };
         }
 
-        public Task<BaseResponse<Product>> GetAsync(Expression<Func<Product, bool>> expression)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<BaseResponse<Product>> UpdateAsync(Guid id, ProductForCreationDTO model)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
+

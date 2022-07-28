@@ -14,18 +14,15 @@ namespace Market.Data.MarketRepositories
     public class GenericRepository<T> : IGenericRepository<T> where T : Auditable
     {
         internal MarketDBContext dbContext;
+
         internal DbSet<T> dbSet;
-        public GenericRepository(MarketDBContext dbContext)
-        {
-            this.dbContext = dbContext;
-            dbSet = dbContext.Set<T>();
-        }
+
 
         public async Task<T> CreateAsync(T entity)
                 => (await dbSet.AddAsync(entity)).Entity;
 
         public Task<T> GetAsync(Expression<Func<T, bool>> predicate)
-            => dbSet.FirstOrDefaultAsync(predicate);
+            => dbSet.Where(predicate).FirstOrDefaultAsync();
 
         public T Update(T entity)
             => dbSet.Update(entity).Entity;

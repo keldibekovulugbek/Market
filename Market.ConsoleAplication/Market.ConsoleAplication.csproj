@@ -14,4 +14,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Market.Service\Market.Service.csproj" />
+  </ItemGroup>
+
 </Project>

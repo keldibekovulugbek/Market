@@ -5,6 +5,4 @@ namespace Market.Data.IMarketRepositories
     public interface ICategoryRepository : IGenericRepository<Category>
     {
     }
-    {
-    }
 }
